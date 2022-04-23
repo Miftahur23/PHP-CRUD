@@ -24,4 +24,8 @@
 
         }
 
+        //retrieve data from database
+
+        $data = mysqli_query($db , "SELECT * FROM users");
+
 ?>
