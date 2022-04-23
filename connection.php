@@ -1,8 +1,6 @@
-
-
 <?php
         //initial variables
-        $id = 0; 
+        $id = 0;
         $name = "";
         $email = "";
         $country = "";
