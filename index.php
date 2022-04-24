@@ -10,24 +10,32 @@
     
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Country</th>
-                <th>Action</th>
-            </tr>
+                    <tr>
+                        
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Country</th>
+                        <th>Action</th>
+                    </tr>
         </thead>
 
+
         <tbody>
-                <td>1</td>
-                <td>Siam</td>
-                <td>siam@gmail.com</td>
-                <td>Bangladesh</td>
-                <td>
-                    <a href="#" class="edit_btn" >Edit</a>
-                    <a href="#" class="del_btn" >Delete </a>
-                </td>
+            <?php while ($row = mysqli_fetch_array($data)) { ?>
+
+                    <tr>
+                        
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['country']; ?></td>
+                        <td>
+                            <a href="#" class="edit_btn" >Edit</a>
+                            <a href="#" class="del_btn" >Delete </a>
+                        </td>
+                    </tr>
+
+            <?php } ?>
+            
         </tbody>
     </table>
 
